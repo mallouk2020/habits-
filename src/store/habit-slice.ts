@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk , PayloadAction } from "@reduxjs/toolkit";
 
 export interface Habit {
   id: string;
@@ -22,6 +22,7 @@ const initialState: HabitState = {
 };
 
 export const fetchHabits = createAsyncThunk("habits/fetchHabits", async () => {
+  
   // Simulating an API call
   await new Promise((resolve) => setTimeout(resolve, 1000));
   const mockHabits: Habit[] = [
